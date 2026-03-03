@@ -1,6 +1,6 @@
 export const SkillsStrip = () => {
     const skills = [
-        'UI Design', 'UX Research', 'Design Systems', 'Prototyping',
+        'UI Design', 'UX Research', 'Design Systems', 'Prototyping', 'Illustration',
         'Responsive Web Design', 'Interaction Design (Micro interactions)', 'Framer Motion', 'Accessibility', 'Accessibility (WCAG)'
     ];
 
