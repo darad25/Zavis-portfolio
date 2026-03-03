@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
         timeline: '2 Months',
         summary: 'A modern EdTech platform designed to personalize learning paths and streamline the onboarding experience for creative and technical skills.',
         featured: true,
-        thumbnail: '/src/assets/edtech.png', // User will replace this path manually
+        thumbnail: '/assets/edtech.png', // User will replace this path manually
         problem: 'Users often find it difficult to navigate vast course libraries and frequently drop off during complex sign-up processes.',
         goals: [
             'Implement a personalization-first onboarding flow',
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
         },
         screens: [
             {
-                src: '/src/assets/edtech.png', // User will replace this path manually
+                src: '/assets/edtech.png', // User will replace this path manually
                 alt: 'LearnHub App Showcase',
                 caption: 'Personalized onboarding and authentication screens.'
             }
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
         timeline: '3 Months',
         summary: 'A comprehensive financial dashboard providing real-time wealth tracking, categorized spending analysis, and social expense management.',
         featured: true,
-        thumbnail: '/src/assets/finance.png', // User will replace this path manually
+        thumbnail: '/assets/finance.png', // User will replace this path manually
         problem: 'Managing personal finances is often overwhelming due to fragmented data and lack of clear visual spending patterns.',
         goals: [
             'Create a high-level wealth overview for instant financial pulses',
@@ -93,7 +93,7 @@ export const PROJECTS: Project[] = [
         },
         screens: [
             {
-                src: '/src/assets/finance.png', // User will replace this path manually
+                src: '/assets/finance.png', // User will replace this path manually
                 alt: 'Vault App Showcase',
                 caption: 'Financial overview and categorized spending breakdown.'
             }
@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
         timeline: '3 Months',
         summary: 'A premium messaging platform focused on seamless communication, featuring interactive stories, real-time chat, and multimedia support.',
         featured: true,
-        thumbnail: '/src/assets/messaging.png', // User will replace this path manually
+        thumbnail: '/assets/messaging.png', // User will replace this path manually
         problem: 'Users need a more intuitive way to balance casual social updates with deep, organized communication.',
         goals: [
             'Integrate a modern "Stories" feature for quick updates',
@@ -143,7 +143,7 @@ export const PROJECTS: Project[] = [
         },
         screens: [
             {
-                src: '/src/assets/messaging.png', // User will replace this path manually
+                src: '/assets/messaging.png', // User will replace this path manually
                 alt: 'Zavis Messaging Showcase',
                 caption: 'Chat list and individual conversation screens.'
             }
@@ -162,7 +162,7 @@ export const PROJECTS: Project[] = [
         timeline: '2 Months',
         summary: 'A vibrant and engaging educational platform designed to inspire creative learning through structured course categories and interactive lesson paths.',
         featured: true,
-        thumbnail: '/src/assets/online-cors.png', // User will replace this path manually
+        thumbnail: '/assets/online-cors.png', // User will replace this path manually
         problem: 'Traditional learning platforms often feel sterile, leading to low engagement for creative subjects like drawing and UI/UX design.',
         goals: [
             'Create a vibrant, high-energy landing experience to inspire learning',
@@ -193,7 +193,7 @@ export const PROJECTS: Project[] = [
         },
         screens: [
             {
-                src: '/src/assets/online-cors.png', // User will replace this path manually
+                src: '/assets/online-cors.png', // User will replace this path manually
                 alt: 'OnlineCors App Showcase',
                 caption: 'Welcome screen, course categories, and course details view.'
             }
@@ -212,7 +212,7 @@ export const PROJECTS: Project[] = [
         timeline: '2 Months',
         summary: 'A premium fashion e-commerce experience designed to simplify the discovery of trendy collections.',
         featured: true,
-        thumbnail: '/src/assets/zavis.png',
+        thumbnail: '/assets/zavis.png',
         problem: 'Fashion enthusiasts often struggle with cluttered interfaces that make finding and purchasing specific collections tedious.',
         goals: [
             'Create a minimalist, high-fashion aesthetic that emphasizes product imagery',
@@ -244,7 +244,7 @@ export const PROJECTS: Project[] = [
         },
         screens: [
             {
-                src: '/src/assets/zavis.png',
+                src: '/assets/zavis.png',
                 alt: 'Zavis App Showcase',
                 caption: 'Mobile UI screens for the E-commerce fashion app.'
             }
