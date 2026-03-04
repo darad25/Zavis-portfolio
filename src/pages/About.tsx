@@ -24,10 +24,10 @@ export default function About() {
                     <h1 style={{ fontSize: '3.5rem', marginBottom: 'var(--spacing-lg)' }}>Designing for impact.</h1>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)', fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
                         <p>
-                            I'm Jane Doe, a multidisciplinary designer and front-end enthusiast based in New York. With over 6 years of experience, I specialize in creating intuitive interfaces for complex systems.
+                            I'm Ozavize Deborah Onaivi, a multidisciplinary designer and psychologist with over 2 years of experience, I specialize in creating intuitive interfaces for complex systems.
                         </p>
                         <p>
-                            My approach blends rigorous UX research with high-fidelity UI design, ensuring that every pixel serves a purpose. I believe that good design is invisible—it should empower users without getting in their way.
+                            My approach blends rigorous UX research with high fidelity UI design, ensuring that every pixel serves a purpose. I believe that good design is invisible, it should empower users without getting in their way.
                         </p>
                         <p>
                             When I'm not pushing pixels, you can find me exploring local coffee shops or experimenting with generative art.
@@ -94,7 +94,7 @@ export default function About() {
                     <Link to="/contact">
                         <Button variant="primary">Get in Touch <ArrowRight size={18} /></Button>
                     </Link>
-                    <a href="mailto:hello@example.com">
+                    <a href="mailto:onaividebs@gmail.com">
                         <Button variant="outline"><Mail size={18} /> Email Me</Button>
                     </a>
                 </div>

@@ -16,7 +16,7 @@ export const WorkGallery = () => {
     return (
         <section className="section container">
             <div style={{ marginBottom: 'var(--spacing-3xl)' }}>
-                <h1 style={{ fontSize: '3rem', marginBottom: 'var(--spacing-md)' }}>Selected Work</h1>
+                <h1 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-md)' }}>Selected Work</h1>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px' }}>
                     A collection of digital products and visual experiments I've worked on over the years.
                 </p>

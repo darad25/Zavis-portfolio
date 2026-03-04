@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Copy, Check } from 'lucide-react';
+import { Github, Linkedin, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {
     const [copied, setCopied] = useState(false);
-    const email = 'hello@example.com';
+    const email = 'onaividebs@gmail.com';
 
     const copyEmail = () => {
         navigator.clipboard.writeText(email);
@@ -17,7 +17,7 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="container section"
-            style={{ textAlign: 'center', maxWidth: '600px', minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
+            style={{ textAlign: 'center', maxWidth: '600px', minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto' }}
         >
             <h1 style={{ fontSize: '3.5rem', marginBottom: 'var(--spacing-lg)' }}>Get in touch.</h1>
             <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', marginBottom: 'var(--spacing-2xl)' }}>
@@ -26,10 +26,15 @@ export default function Contact() {
 
             <div style={{
                 background: 'var(--bg-secondary)',
-                padding: 'var(--spacing-2xl)',
+                padding: 'var(--spacing-xl) var(--spacing-2xl)',
                 borderRadius: 'var(--border-radius-lg)',
                 border: '1px solid var(--border-color)',
-                marginBottom: 'var(--spacing-xl)'
+                width: 'fit-content',
+                minWidth: '320px',
+                margin: '0 auto var(--spacing-xl)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
             }}>
                 <p style={{ color: 'var(--text-tertiary)', fontSize: '0.9rem', textTransform: 'uppercase', marginBottom: 'var(--spacing-sm)' }}>Email Address</p>
                 <div className="flex items-center justify-center gap-md">
@@ -49,11 +54,19 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div className="flex justify-center gap-xl">
+            <div className="flex justify-center" style={{ gap: '3rem' }}>
                 {[
                     { icon: <Github />, label: 'GitHub', url: 'https://github.com' },
-                    { icon: <Linkedin />, label: 'LinkedIn', url: 'https://linkedin.com' },
-                    { icon: <Twitter />, label: 'Twitter', url: 'https://twitter.com' }
+                    { icon: <Linkedin />, label: 'LinkedIn', url: 'https://linkedin.com/in/ozavize-onaivi-616333237?utm_source=share_via&utm_content=profile&utm_medium=member_ios' },
+                    {
+                        icon: (
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z" />
+                            </svg>
+                        ),
+                        label: 'X',
+                        url: 'https://x.com/Vee_Zavis'
+                    }
                 ].map(social => (
                     <a
                         key={social.label}
@@ -63,7 +76,15 @@ export default function Contact() {
                         className="hover-lift"
                         style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}
                     >
-                        <div style={{ padding: '12px', background: 'var(--bg-tertiary)', borderRadius: '50%' }}>
+                        <div style={{
+                            width: '48px',
+                            height: '48px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            background: 'var(--bg-tertiary)',
+                            borderRadius: '50%'
+                        }}>
                             {social.icon}
                         </div>
                         <span style={{ fontSize: '0.75rem', fontWeight: 600 }}>{social.label}</span>

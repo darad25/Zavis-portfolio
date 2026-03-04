@@ -1,27 +1,61 @@
 import { motion } from 'framer-motion';
-import { Button } from '../components/ui/Button';
-import { Download, Briefcase, GraduationCap } from 'lucide-react';
+import { Briefcase, GraduationCap, Award, Heart } from 'lucide-react';
 
 export default function Resume() {
-    const experience = [
+    const skills = [
+        'Emotional Intelligence', 'Communication & Collaboration', 'Empathy & Active Listening',
+        'UI/UX Design Principles', 'Figma', 'Illustration (Digital & Concept Sketches)',
+        'Wireframing & Prototyping', 'User Research & Usability Testing', 'Community Outreach & Support'
+    ];
+
+    const professionalExperience = [
         {
-            company: 'Design Studio X',
-            role: 'Senior Product Designer',
-            period: '2022 — Present',
-            desc: 'Leading design for fintech platforms and complex SaaS dashboards.'
+            company: 'Dev and Design',
+            role: 'Illustrator',
+            period: 'October 2025 - November 2025',
+            items: [
+                'Developed basic conceptual sketches to support UI layouts and digital storytelling.',
+                'Designed custom illustrations and silhouettes for client projects, including brand visuals and digital storytelling assets.'
+            ]
         },
         {
-            company: 'TechFlow Systems',
-            role: 'UI Designer',
-            period: '2019 — 2022',
-            desc: 'Collaborated with engineering to build an internal logistics console.'
+            company: 'Living Vines Mental Health Organization, Lagos',
+            role: 'Assistant Psychologist (Volunteer)',
+            period: 'January 2024 – Present',
+            items: [
+                'Provide emotional support to individuals experiencing stress, anxiety, or emotional difficulties through listening, encouragement, and supportive conversations.',
+                'Participate in mental health outreach programs, school visits, and community campaigns to “preach the word of mental health” and reduce stigma.',
+                'Assist senior psychologists during counselling related activities and follow ups, under supervision.',
+                'Help organize and support psychoeducational sessions on topics such as emotional regulation, stress management, and self-care.',
+                'Contribute to planning and coordination of outreach events, including logistics, communication, and engagement with participants.'
+            ]
         },
         {
-            company: 'Bright Ideas Agency',
+            company: 'Product Design University (PDU) Africa',
             role: 'Junior Designer',
-            period: '2017 — 2019',
-            desc: 'Visual design for luxury e-commerce brands.'
+            period: 'August 2024 – January 2025',
+            items: [
+                'Conducted user research through feedback collection, surveys, and usability observations to understand user needs and identify pain points.',
+                'Created structured wireframes and user flows that translated ideas into clear and intuitive user experiences.',
+                'Designed clean, user-centered interface screens and visual elements using Figma.',
+                'Built interactive prototypes to demonstrate functionality and gather feedback from the design team and stakeholders.',
+                'Collaborated with senior designers and developers to ensure accurate implementation of UI components and interaction patterns.'
+            ]
         }
+    ];
+
+    const education = [
+        {
+            school: 'University of Lagos, Nigeria',
+            degree: 'Bachelor of Science (B.Sc.) – Psychology',
+            period: '2021 – 2025'
+        }
+    ];
+
+    const certifications = [
+        { title: 'Illustration', school: 'Dev and Design', date: 'Nov, 2025' },
+        { title: 'UI/UX Design', school: 'PDU Africa', date: 'Jan, 2025' },
+        { title: 'Introduction to UI/UX', school: 'PDU Bootcamp', date: 'Sep, 2025' }
     ];
 
     return (
@@ -29,82 +63,101 @@ export default function Resume() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="container section"
-            style={{ maxWidth: '800px' }}
+            style={{ maxWidth: '900px' }}
         >
-            <div className="flex justify-between items-end" style={{ marginBottom: 'var(--spacing-3xl)' }}>
-                <div>
-                    <h1 style={{ fontSize: '3rem', marginBottom: 'var(--spacing-sm)' }}>Resume</h1>
-                    <p style={{ color: 'var(--text-secondary)' }}>My professional journey and technical expertise.</p>
-                </div>
-                <Button variant="primary" as="a" href="/resume.pdf" download>
-                    <Download size={18} /> Download PDF
-                </Button>
+            <div style={{ marginBottom: 'var(--spacing-4xl)' }}>
+                <h1 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-md)' }}>Resume</h1>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', marginBottom: 'var(--spacing-2xl)' }}>
+                    A psychology graduate with a unique blend of emotional intelligence and creative problem solving skills, bridging the gap between human behavior and digital experiences.
+                </p>
             </div>
 
-            <div style={{ marginBottom: 'var(--spacing-3xl)' }}>
-                <div className="flex items-center gap-md" style={{ marginBottom: 'var(--spacing-xl)' }}>
-                    <Briefcase size={24} color="var(--accent-primary)" />
-                    <h2 style={{ fontSize: '1.75rem' }}>Experience</h2>
+            {/* Experience Section */}
+            <div style={{ marginBottom: 'var(--spacing-4xl)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-md)', marginLeft: '-10px' }}>
+                    <Briefcase size={28} color="var(--accent-primary)" />
+                    <h2 style={{ fontSize: '2rem', margin: 0 }}>Professional Experience</h2>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-2xl)' }}>
-                    {experience.map((job, i) => (
-                        <div key={i} style={{ position: 'relative', paddingLeft: 'var(--spacing-2xl)' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-3xl)' }}>
+                    {professionalExperience.map((job, i) => (
+                        <div key={i} style={{ borderLeft: '2px solid var(--border-color)', paddingLeft: 'var(--spacing-xl)', position: 'relative' }}>
                             <div style={{
                                 position: 'absolute',
-                                left: 0,
-                                top: 8,
-                                bottom: -40,
-                                width: 2,
-                                background: i === experience.length - 1 ? 'linear-gradient(to bottom, var(--border-color), transparent)' : 'var(--border-color)'
-                            }} />
-                            <div style={{
-                                position: 'absolute',
-                                left: -4,
-                                top: 8,
-                                width: 10,
-                                height: 10,
+                                left: `-9px`,
+                                top: '0',
+                                width: '16px',
+                                height: '16px',
                                 borderRadius: '50%',
-                                background: 'var(--accent-primary)',
-                                border: '4px solid var(--bg-primary)'
+                                background: 'var(--bg-primary)',
+                                border: '3px solid var(--accent-primary)'
                             }} />
 
-                            <div className="flex justify-between items-start" style={{ marginBottom: '4px' }}>
-                                <h3 style={{ fontSize: '1.25rem' }}>{job.role}</h3>
-                                <span style={{ fontSize: '0.9rem', color: 'var(--text-tertiary)', fontWeight: 500 }}>{job.period}</span>
+                            <div className="flex justify-between items-start" style={{ flexWrap: 'wrap', gap: 'var(--spacing-sm)', marginBottom: 'var(--spacing-xs)' }}>
+                                <h3 style={{ fontSize: '1.4rem', fontWeight: 700 }}>{job.role}</h3>
+                                <span style={{ color: 'var(--text-tertiary)', fontSize: '0.9rem', fontWeight: 500 }}>{job.period}</span>
                             </div>
-                            <p style={{ color: 'var(--accent-primary)', fontWeight: 600, marginBottom: 'var(--spacing-sm)' }}>{job.company}</p>
-                            <p style={{ color: 'var(--text-secondary)' }}>{job.desc}</p>
+                            <p style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '1.1rem', marginBottom: 'var(--spacing-md)' }}>{job.company}</p>
+
+                            <ul style={{ paddingLeft: 'var(--spacing-4xl)', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                                {job.items.map((item, idx) => (
+                                    <li key={idx} style={{ marginBottom: 'var(--spacing-xs)' }}>{item}</li>
+                                ))}
+                            </ul>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div className="grid grid-2" style={{ gap: 'var(--spacing-3xl)' }}>
+            <div className="grid grid-2" style={{ gap: 'var(--spacing-4xl)', columnGap: '5rem', marginTop: '5rem', alignItems: 'start' }}>
+                {/* Left Column: Skills & Education */}
                 <div>
-                    <div className="flex items-center gap-md" style={{ marginBottom: 'var(--spacing-xl)' }}>
-                        <GraduationCap size={24} color="var(--accent-primary)" />
-                        <h2 style={{ fontSize: '1.5rem' }}>Education</h2>
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-lg)' }}>
-                        <div>
-                            <p style={{ fontWeight: 600 }}>University of Design</p>
-                            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>BFA in Graphic Design, 2017</p>
+                    <div style={{ marginBottom: 'var(--spacing-3xl)' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-xl)' }}>
+                            <Heart size={24} color="var(--accent-primary)" />
+                            <h2 style={{ fontSize: '1.75rem', margin: 0 }}>Skills</h2>
                         </div>
+                        <div className="flex gap-sm" style={{ flexWrap: 'wrap' }}>
+                            {skills.map(skill => (
+                                <span key={skill} style={{
+                                    padding: '6px 14px',
+                                    background: 'var(--bg-secondary)',
+                                    border: '1px solid var(--border-color)',
+                                    borderRadius: 'var(--border-radius-md)',
+                                    fontSize: '0.9rem'
+                                }}>{skill}</span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-xl)' }}>
+                            <GraduationCap size={24} color="var(--accent-primary)" />
+                            <h2 style={{ fontSize: '1.75rem', margin: 0 }}>Education</h2>
+                        </div>
+                        {education.map((edu, i) => (
+                            <div key={i}>
+                                <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>{edu.school}</h3>
+                                <p style={{ color: 'var(--text-secondary)' }}>{edu.degree}</p>
+                                <p style={{ color: 'var(--text-tertiary)', fontSize: '0.9rem' }}>{edu.period}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
+                {/* Right Column: Certifications */}
                 <div>
-                    <h2 style={{ fontSize: '1.5rem', marginBottom: 'var(--spacing-xl)' }}>Skills</h2>
-                    <div className="flex gap-sm" style={{ flexWrap: 'wrap' }}>
-                        {['Visual Design', 'UX Research', 'Interaction Design', 'Storytelling', 'Frontend Dev', 'Design Systems'].map(skill => (
-                            <span key={skill} style={{
-                                padding: '4px 12px',
-                                background: 'var(--bg-secondary)',
-                                border: '1px solid var(--border-color)',
-                                borderRadius: 'var(--border-radius-sm)',
-                                fontSize: '0.875rem'
-                            }}>{skill}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-xl)' }}>
+                        <Award size={24} color="var(--accent-primary)" />
+                        <h2 style={{ fontSize: '1.75rem', margin: 0 }}>Certifications</h2>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-xl)' }}>
+                        {certifications.map((cert, i) => (
+                            <div key={i} style={{ padding: 'var(--spacing-md)', background: 'var(--bg-secondary)', borderRadius: 'var(--border-radius-lg)', border: '1px solid var(--border-color)' }}>
+                                <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>{cert.title}</h3>
+                                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>{cert.school}</p>
+                                <p style={{ color: 'var(--text-tertiary)', fontSize: '0.85rem' }}>{cert.date}</p>
+                            </div>
                         ))}
                     </div>
                 </div>

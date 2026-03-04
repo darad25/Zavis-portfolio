@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const Footer = () => {
     return (
@@ -27,8 +27,10 @@ export const Footer = () => {
                         <a href="https://linkedin.com/in/ozavize-onaivi-616333237?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" className="hover-lift" title="LinkedIn">
                             <Linkedin size={24} />
                         </a>
-                        <a href="https://x.com/Vee_Zavis" target="_blank" rel="noopener noreferrer" className="hover-lift" title="Twitter">
-                            <Twitter size={24} />
+                        <a href="https://x.com/Vee_Zavis" target="_blank" rel="noopener noreferrer" className="hover-lift" title="X (Twitter)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z" />
+                            </svg>
                         </a>
                     </div>
 

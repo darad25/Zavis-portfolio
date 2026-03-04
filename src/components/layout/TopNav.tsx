@@ -33,6 +33,7 @@ export const TopNav = () => {
                     fontFamily: 'var(--font-heading)',
                     color: 'var(--text-primary)',
                     letterSpacing: '4px',
+                    marginLeft: '-22px'
                 }}>
                     OZAVIZE DEBORAH ONAIVI PORTFOLIO
                 </Link>
