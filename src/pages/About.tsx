@@ -68,15 +68,16 @@ export default function About() {
                     </div>
                 </div>
 
-                <div style={{ background: 'var(--bg-secondary)', padding: 'var(--spacing-2xl)', borderRadius: 'var(--border-radius-lg)', border: '1px solid var(--border-color)' }}>
-                    <h2 style={{ fontSize: '1.5rem', marginBottom: 'var(--spacing-lg)' }}>Tools I Love</h2>
-                    <div className="grid grid-2" style={{ gap: 'var(--spacing-md)' }}>
+                <div style={{ background: 'var(--bg-secondary)', padding: 'var(--spacing-2xl)', borderRadius: 'var(--border-radius-lg)', border: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <h2 style={{ fontSize: '1.5rem', marginBottom: 'var(--spacing-lg)', textAlign: 'center' }}>Tools I Love</h2>
+                    <div className="grid grid-2" style={{ gap: 'var(--spacing-md)', width: '100%', maxWidth: '500px' }}>
                         {tools.map(tool => (
                             <div key={tool.name} style={{
                                 padding: 'var(--spacing-md)',
                                 background: 'var(--bg-primary)',
                                 borderRadius: 'var(--border-radius-md)',
-                                border: '1px solid var(--border-color)'
+                                border: '1px solid var(--border-color)',
+                                textAlign: 'center'
                             }}>
                                 <span style={{ fontSize: '0.75rem', color: 'var(--text-tertiary)', textTransform: 'uppercase' }}>{tool.category}</span>
                                 <p style={{ fontWeight: 600 }}>{tool.name}</p>
@@ -89,7 +90,7 @@ export default function About() {
             <div style={{ textAlign: 'center', padding: 'var(--spacing-3xl) 0', borderTop: '1px solid var(--border-color)' }}>
                 <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-md)' }}>Let's build something together.</h2>
                 <p style={{ color: 'var(--text-secondary)', marginBottom: 'var(--spacing-xl)', fontSize: '1.2rem' }}>Currently open to freelance projects and full-time opportunities.</p>
-                <div className="flex gap-lg justify-center">
+                <div className="flex gap-lg" style={{ justifyContent: 'center' }}>
                     <Link to="/contact">
                         <Button variant="primary">Get in Touch <ArrowRight size={18} /></Button>
                     </Link>

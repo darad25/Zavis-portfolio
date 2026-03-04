@@ -1,22 +1,24 @@
-import { PROJECTS } from '../../data/projects';
+import { ILLUSTRATIONS } from '../../data/illustrations';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface NextPrevProjectNavProps {
+interface NextPrevIllustrationNavProps {
     currentSlug: string;
 }
 
-export const NextPrevProjectNav = ({ currentSlug }: NextPrevProjectNavProps) => {
-    const currentIndex = PROJECTS.findIndex(p => p.slug === currentSlug);
-    const prev = PROJECTS[currentIndex - 1];
-    const next = PROJECTS[currentIndex + 1];
+export const NextPrevIllustrationNav = ({ currentSlug }: NextPrevIllustrationNavProps) => {
+    const currentIndex = ILLUSTRATIONS.findIndex(p => p.slug === currentSlug);
+    const prev = ILLUSTRATIONS[currentIndex - 1];
+    const next = ILLUSTRATIONS[currentIndex + 1];
+
+    if (!prev && !next) return null;
 
     return (
         <nav className="project-nav" style={{ borderTop: '1px solid var(--border-color)', background: 'var(--bg-secondary)' }}>
             <div className="container project-nav-flex" style={{ minHeight: '120px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 'var(--spacing-lg)', flexWrap: 'nowrap' }}>
                 {prev && (
                     <div className="project-nav-item" style={{ flex: '0 1 auto' }}>
-                        <Link to={`/work/${prev.slug}`} className="flex items-center gap-sm project-nav-link" style={{
+                        <Link to={`/illustrations/${prev.slug}`} className="flex items-center gap-sm project-nav-link" style={{
                             padding: 'var(--spacing-md) var(--spacing-lg)',
                             transition: 'var(--transition-normal)',
                             borderRadius: 'var(--border-radius-lg)',
@@ -34,7 +36,7 @@ export const NextPrevProjectNav = ({ currentSlug }: NextPrevProjectNavProps) => 
                 )}
                 {next && (
                     <div className="project-nav-item" style={{ flex: '0 1 auto' }}>
-                        <Link to={`/work/${next.slug}`} className="flex items-center gap-sm project-nav-link" style={{
+                        <Link to={`/illustrations/${next.slug}`} className="flex items-center gap-sm project-nav-link" style={{
                             padding: 'var(--spacing-md) var(--spacing-lg)',
                             transition: 'var(--transition-normal)',
                             borderRadius: 'var(--border-radius-lg)',
