@@ -24,11 +24,11 @@ export default function CaseStudy() {
             <section className="container section">
                 <div className="grid grid-2">
                     <div>
-                        <h2 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-md)' }}>The Problem</h2>
+                        <h2>The Problem</h2>
                         <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>{project.problem}</p>
                     </div>
                     <div>
-                        <h2 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-md)' }}>The Goals</h2>
+                        <h2>The Goals</h2>
                         <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)' }}>
                             {project.goals.map((goal, i) => (
                                 <li key={i} style={{
@@ -51,7 +51,7 @@ export default function CaseStudy() {
                 <div className="container">
                     <div className="grid grid-2">
                         <div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: 'var(--spacing-md)' }}>Constraints</h3>
+                            <h3>Constraints</h3>
                             <div className="flex flex-col gap-sm">
                                 {project.constraints.map((c, i) => (
                                     <p key={i} style={{ color: 'var(--text-secondary)' }}>• {c}</p>
@@ -59,7 +59,7 @@ export default function CaseStudy() {
                             </div>
                         </div>
                         <div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: 'var(--spacing-md)' }}>Key UX Decisions</h3>
+                            <h3>Key UX Decisions</h3>
                             <div className="flex flex-col gap-sm">
                                 {project.uxDecisions.map((d, i) => (
                                     <p key={i} style={{ color: 'var(--text-secondary)' }}>• {d}</p>

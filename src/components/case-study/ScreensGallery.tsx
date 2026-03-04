@@ -8,7 +8,7 @@ interface ScreensGalleryProps {
 export const ScreensGallery = ({ screens }: ScreensGalleryProps) => {
     return (
         <section className="container section">
-            <h2 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-2xl)' }}>Key Screens</h2>
+            <h2>Key Screens</h2>
             <div className="grid">
                 {screens.map((screen, i) => (
                     <motion.div

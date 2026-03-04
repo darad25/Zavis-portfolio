@@ -14,7 +14,7 @@ export const ProblemsSolved = ({ data }: ProblemsSolvedProps) => {
 
     return (
         <section className="container section">
-            <h2 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-2xl)' }}>Problems Solved</h2>
+            <h2>Problems Solved</h2>
             <div className="grid grid-3">
                 {sections.map(section => (
                     <div key={section.title} style={{

@@ -74,14 +74,14 @@ export default function Resume() {
 
             {/* Experience Section */}
             <div style={{ marginBottom: 'var(--spacing-4xl)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-md)', marginLeft: '-10px' }}>
+                <div className="resume-section-header" style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)', marginBottom: 'var(--spacing-md)' }}>
                     <Briefcase size={28} color="var(--accent-primary)" />
                     <h2 style={{ fontSize: '2rem', margin: 0 }}>Professional Experience</h2>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-3xl)' }}>
                     {professionalExperience.map((job, i) => (
-                        <div key={i} style={{ borderLeft: '2px solid var(--border-color)', paddingLeft: 'var(--spacing-xl)', position: 'relative' }}>
+                        <div key={i} style={{ borderLeft: '2px solid var(--border-color)', paddingLeft: 'var(--spacing-lg)', position: 'relative' }}>
                             <div style={{
                                 position: 'absolute',
                                 left: `-9px`,
@@ -99,7 +99,7 @@ export default function Resume() {
                             </div>
                             <p style={{ color: 'var(--accent-primary)', fontWeight: 600, fontSize: '1.1rem', marginBottom: 'var(--spacing-md)' }}>{job.company}</p>
 
-                            <ul style={{ paddingLeft: 'var(--spacing-4xl)', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+                            <ul className="resume-list" style={{ paddingLeft: '2rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
                                 {job.items.map((item, idx) => (
                                     <li key={idx} style={{ marginBottom: 'var(--spacing-xs)' }}>{item}</li>
                                 ))}
@@ -109,7 +109,7 @@ export default function Resume() {
                 </div>
             </div>
 
-            <div className="grid grid-2" style={{ gap: 'var(--spacing-4xl)', columnGap: '5rem', marginTop: '5rem', alignItems: 'start' }}>
+            <div className="resume-grid" style={{ display: 'grid', alignItems: 'start' }}>
                 {/* Left Column: Skills & Education */}
                 <div>
                     <div style={{ marginBottom: 'var(--spacing-3xl)' }}>
@@ -162,6 +162,27 @@ export default function Resume() {
                     </div>
                 </div>
             </div>
+            <style>{`
+                .resume-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: var(--spacing-4xl);
+                    column-gap: 5rem;
+                    margin-top: 5rem;
+                }
+                @media (max-width: 768px) {
+                    .resume-grid {
+                        grid-template-columns: 1fr;
+                        gap: var(--spacing-2xl);
+                        margin-top: var(--spacing-2xl);
+                    }
+                    .resume-section-header h2 {
+                        font-size: 1.5rem !important;
+                    }
+                    .resume-list {
+                        padding-left: 1.25rem !important;
+                    }
+                }
+            `}</style>
         </motion.div>
     );
 }

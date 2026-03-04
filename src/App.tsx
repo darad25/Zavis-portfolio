@@ -8,6 +8,7 @@ import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Illustrations from './pages/Illustrations';
 import { IllustrationDetail } from './pages/IllustrationDetail';
+import CoreStrengths from './pages/CoreStrengths';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/work/:slug" element={<CaseStudy />} />
           <Route path="/illustrations" element={<Illustrations />} />
           <Route path="/illustrations/:slug" element={<IllustrationDetail />} />
+          <Route path="/core-strengths" element={<CoreStrengths />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />

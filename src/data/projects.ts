@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
         year: '2025',
         role: 'UI/UX Designer',
         tools: ['Figma'],
-        timeline: '2 Months',
+        timeline: '1 Week',
         summary: 'A modern EdTech platform designed to personalize learning paths and streamline the onboarding experience for creative and technical skills.',
         featured: true,
         thumbnail: '/assets/edtech.png', // User will replace this path manually
@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
         year: '2025',
         role: 'Product Designer',
         tools: ['Figma'],
-        timeline: '3 Months',
+        timeline: '1 Week',
         summary: 'A comprehensive financial dashboard providing real-time wealth tracking, categorized spending analysis, and social expense management.',
         featured: true,
         thumbnail: '/assets/finance.png', // User will replace this path manually
@@ -109,7 +109,7 @@ export const PROJECTS: Project[] = [
         year: '2025',
         role: 'Product Designer',
         tools: ['Figma'],
-        timeline: '3 Months',
+        timeline: '1 Week',
         summary: 'A premium messaging platform focused on seamless communication, featuring interactive stories, real-time chat, and multimedia support.',
         featured: true,
         thumbnail: '/assets/messaging.png', // User will replace this path manually
@@ -159,7 +159,7 @@ export const PROJECTS: Project[] = [
         year: '2025',
         role: 'Product Designer',
         tools: ['Figma'],
-        timeline: '2 Months',
+        timeline: '1 Week',
         summary: 'A vibrant and engaging educational platform designed to inspire creative learning through structured course categories and interactive lesson paths.',
         featured: true,
         thumbnail: '/assets/online-cors.png', // User will replace this path manually

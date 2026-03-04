@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const NAV_LINKS = [
     { name: 'Work', path: '/work' },
+    { name: 'Core Strengths', path: '/core-strengths' },
     { name: 'About', path: '/about' },
     { name: 'Resume', path: '/resume' },
     { name: 'Contact', path: '/contact' },
@@ -27,15 +28,15 @@ export const TopNav = () => {
             alignItems: 'center',
         }}>
             <div className="container flex justify-between items-center" style={{ width: '100%' }}>
-                <Link to="/" style={{
-                    fontSize: '1.5rem',
+                <Link to="/" className="nav-logo" style={{
+                    fontSize: 'clamp(0.85rem, 4vw, 1.5rem)',
                     fontWeight: 700,
                     fontFamily: 'var(--font-heading)',
                     color: 'var(--text-primary)',
-                    letterSpacing: '4px',
-                    marginLeft: '-22px'
+                    letterSpacing: '2px',
+                    whiteSpace: 'nowrap'
                 }}>
-                    OZAVIZE DEBORAH ONAIVI PORTFOLIO
+                    OZAVIZE'S PORTFOLIO
                 </Link>
 
                 {/* Desktop Nav */}
@@ -123,9 +124,12 @@ export const TopNav = () => {
             <style>{`
         .desktop-only { display: none !important; }
         .mobile-only { display: flex !important; }
+        .nav-logo { margin-left: 0; }
+        
         @media (min-width: 768px) {
           .desktop-only { display: flex !important; }
           .mobile-only { display: none !important; }
+          .nav-logo { margin-left: -22px; }
         }
       `}</style>
         </nav>

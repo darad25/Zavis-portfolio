@@ -26,35 +26,55 @@ export default function Contact() {
 
             <div style={{
                 background: 'var(--bg-secondary)',
-                padding: 'var(--spacing-xl) var(--spacing-2xl)',
+                padding: 'var(--spacing-xl) var(--spacing-lg)',
                 borderRadius: 'var(--border-radius-lg)',
                 border: '1px solid var(--border-color)',
-                width: 'fit-content',
-                minWidth: '320px',
+                width: '100%',
+                maxWidth: '450px',
                 margin: '0 auto var(--spacing-xl)',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center'
+                alignItems: 'center',
+                overflow: 'hidden'
             }}>
-                <p style={{ color: 'var(--text-tertiary)', fontSize: '0.9rem', textTransform: 'uppercase', marginBottom: 'var(--spacing-sm)' }}>Email Address</p>
-                <div className="flex items-center justify-center gap-md">
-                    <span style={{ fontSize: '1.5rem', fontWeight: 600 }}>{email}</span>
+                <p style={{ color: 'var(--text-tertiary)', fontSize: '0.8rem', textTransform: 'uppercase', marginBottom: 'var(--spacing-md)', letterSpacing: '0.05em' }}>Email Address</p>
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 'var(--spacing-md)',
+                    width: '100%',
+                    flexWrap: 'wrap'
+                }}>
+                    <span style={{
+                        fontSize: 'clamp(1rem, 4vw, 1.5rem)',
+                        fontWeight: 600,
+                        color: 'var(--text-primary)',
+                        wordBreak: 'break-all'
+                    }}>{email}</span>
                     <button
                         onClick={copyEmail}
                         style={{
-                            padding: '8px',
+                            width: '44px',
+                            height: '44px',
                             borderRadius: '50%',
                             background: 'var(--bg-primary)',
                             color: copied ? '#10b981' : 'var(--text-primary)',
-                            border: '1px solid var(--border-color)'
+                            border: '1px solid var(--border-color)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexShrink: 0,
+                            transition: 'all 0.2s ease'
                         }}
+                        aria-label="Copy email address"
                     >
                         {copied ? <Check size={20} /> : <Copy size={20} />}
                     </button>
                 </div>
             </div>
 
-            <div className="flex justify-center" style={{ gap: '3rem' }}>
+            <div className="flex justify-center flex-wrap" style={{ gap: 'clamp(1rem, 5vw, 3rem)' }}>
                 {[
                     { icon: <Github />, label: 'GitHub', url: 'https://github.com' },
                     { icon: <Linkedin />, label: 'LinkedIn', url: 'https://linkedin.com/in/ozavize-onaivi-616333237?utm_source=share_via&utm_content=profile&utm_medium=member_ios' },

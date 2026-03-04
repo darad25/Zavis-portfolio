@@ -5,7 +5,7 @@ export const SkillsStrip = () => {
     ];
 
     return (
-        <section className="section" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
+        <section className="section core-content-section" style={{ background: 'var(--bg-secondary)', borderTop: '1px solid var(--border-color)', borderBottom: '1px solid var(--border-color)' }}>
             <div className="container">
                 <h2 style={{ fontSize: '1.5rem', textAlign: 'center', marginBottom: 'var(--spacing-xl)' }}>Core Strengths</h2>
                 <div className="flex gap-md items-center justify-center" style={{ flexWrap: 'wrap' }}>
@@ -27,6 +27,11 @@ export const SkillsStrip = () => {
                     ))}
                 </div>
             </div>
+            <style>{`
+                @media (max-width: 768px) {
+                    .core-content-section { display: none !important; }
+                }
+            `}</style>
         </section>
     );
 };

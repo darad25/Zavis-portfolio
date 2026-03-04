@@ -55,12 +55,6 @@
   --nav-bg: rgba(2, 6, 23, 0.8);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html,
 body {
   background-color: var(--bg-primary);
@@ -71,6 +65,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
 }
 
 h1,
@@ -124,8 +127,23 @@ img {
   padding: 0 var(--spacing-lg);
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+    /* Maintain LG padding on mobile too for better balance */
+  }
+}
+
 .section {
-  padding: var(--spacing-3xl) 0;
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
 }
 
 .flex {

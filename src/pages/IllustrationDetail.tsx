@@ -38,7 +38,6 @@ export const IllustrationDetail = () => {
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    style={{ fontSize: 'clamp(2.5rem, 5vw, 0.5rem)', marginBottom: 'var(--spacing-lg)' }}
                 >
                     {illustration.title}
                 </motion.h1>
@@ -90,8 +89,8 @@ export const IllustrationDetail = () => {
 
             {/* Insight Section */}
             {illustration.insight && (
-                <section style={{ margin: '0 0 var(--spacing-4xl) 0' }}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: 'var(--spacing-lg)' }}>Artist Insight</h2>
+                <section style={{ marginBottom: 'var(--spacing-4xl)' }}>
+                    <h2>Artist Insight</h2>
                     <p style={{
                         fontSize: '1.2rem',
                         lineHeight: 1.6,
@@ -107,7 +106,6 @@ export const IllustrationDetail = () => {
             {illustration.process && illustration.process.length > 0 && (
                 <section style={{ maxWidth: '900px', margin: '0 auto' }}>
                     <h2 style={{
-                        maxWidth: '600px', marginLeft: '-150px', fontSize: '2rem',
                         marginBottom: 'var(--spacing-lg)',
                         marginTop: 'var(--spacing-2xl)',
                         whiteSpace: 'pre-line'

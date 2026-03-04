@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 
 export const Hero = () => {
     return (
-        <section className="section container" style={{
+        <section className="section container hero-section" style={{
             minHeight: '80vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            paddingBottom: 'var(--spacing-3xl)'
+            paddingBottom: 'var(--spacing-3xl)',
         }}>
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -54,6 +54,16 @@ export const Hero = () => {
                     </Button>
                 </div>
             </motion.div>
+            <style>{`
+                @media (max-width: 768px) {
+                    .hero-section {
+                        min-height: 50vh !important;
+                        justify-content: flex-start !important;
+                        padding-top: var(--spacing-xl) !important;
+                        padding-bottom: 0 !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

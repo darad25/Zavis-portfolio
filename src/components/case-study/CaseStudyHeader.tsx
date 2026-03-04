@@ -23,7 +23,7 @@ export const CaseStudyHeader = ({ project }: CaseStudyHeaderProps) => {
                     }}>
                         {project.type} • {project.year}
                     </span>
-                    <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: 'var(--spacing-md)' }}>{project.title}</h1>
+                    <h1>{project.title}</h1>
                     <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', maxWidth: '800px' }}>
                         {project.summary}
                     </p>

@@ -6,11 +6,11 @@ import { Mail, ArrowRight } from 'lucide-react';
 export default function About() {
     const tools = [
         { name: 'Figma', category: 'Design' },
-        { name: 'React', category: 'Development' },
-        { name: 'TypeScript', category: 'Development' },
-        { name: 'Framer Motion', category: 'Animation' },
-        { name: 'Dovetail', category: 'Research' },
-        { name: 'Storybook', category: 'Testing' }
+        { name: 'Antigravity', category: 'Development' },
+        // { name: 'TypeScript', category: 'Development' },
+        // { name: 'Framer Motion', category: 'Animation' },
+        // { name: 'Dovetail', category: 'Research' },
+        // { name: 'Storybook', category: 'Testing' }
     ];
 
     return (
@@ -36,16 +36,15 @@ export default function About() {
                 </div>
                 <div style={{ padding: 'var(--spacing-xl)' }}>
                     <div style={{
-                        aspectRatio: '1/1',
                         borderRadius: 'var(--border-radius-lg)',
                         overflow: 'hidden',
                         background: 'var(--bg-tertiary)',
                         border: '1px solid var(--border-color)'
                     }}>
                         <img
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
-                            alt="Jane Doe"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)' }}
+                            src="/assets/AboutZ.png"
+                            alt="Ozavize Deborah Onaivi"
+                            style={{ width: '100%', height: "660px", objectFit: 'cover' }}
                         />
                     </div>
                 </div>
@@ -99,6 +98,24 @@ export default function About() {
                     </a>
                 </div>
             </div>
+            <style>{`
+                @media (max-width: 768px) {
+                    h1 {
+                        font-size: 2.5rem !important;
+                    }
+                    .about-image-container {
+                        padding: 0 !important;
+                        margin-top: var(--spacing-xl);
+                    }
+                    .about-tools-card {
+                        padding: var(--spacing-xl) !important;
+                        margin-top: var(--spacing-xl);
+                    }
+                    .about-cta h2 {
+                        font-size: 1.75rem !important;
+                    }
+                }
+            `}</style>
         </motion.div>
     );
 }
