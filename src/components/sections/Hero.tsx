@@ -49,9 +49,6 @@ export const Hero = () => {
                             View My Work <ChevronRight size={18} />
                         </Button>
                     </Link>
-                    <Button variant="outline" as="a" href="/resume.pdf" download>
-                        Download CV <FileText size={18} />
-                    </Button>
                 </div>
             </motion.div>
             <style>{`

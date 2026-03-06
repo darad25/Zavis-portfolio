@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppShell } from './components/layout/AppShell';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './pages/Home';
 import Work from './pages/Work';
 import CaseStudy from './pages/CaseStudy';
@@ -13,6 +14,7 @@ import CoreStrengths from './pages/CoreStrengths';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppShell>
         <Routes>
           <Route path="/" element={<Home />} />

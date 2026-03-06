@@ -24,7 +24,7 @@ export const IllustrationDetail = () => {
             <div className="container" style={{ paddingTop: 'var(--spacing-3xl)' }}>
                 {/* Header / Meta */}
                 <div style={{ marginBottom: 'var(--spacing-3xl)' }}>
-                    <Link to="/work" style={{
+                    <Link to="/illustrations" style={{
                         display: 'flex',
                         alignItems: 'center',
                         gap: 'var(--spacing-xs)',
@@ -34,7 +34,7 @@ export const IllustrationDetail = () => {
                         fontSize: '0.9rem',
                         transition: 'var(--transition-fast)'
                     }} className="hover-primary">
-                        <ChevronLeft size={16} /> Back to Work
+                        <ChevronLeft size={16} /> Back to Illustrations
                     </Link>
 
                     <motion.h1
